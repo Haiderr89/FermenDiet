@@ -1,0 +1,82 @@
+.footer {
+    /* background-color: var(--color-primary); */
+    color: var(--color-accent);
+    /* Dark text on green? Or white? Image shows dark text at bottom left, but white links? */
+    /* Let's assume dark text for brand, white for links or vice versa. */
+    /* Usually footers are dark or match the theme. */
+    /* Let's use the same green background but maybe darker text or white. */
+    padding: var(--spacing-lg) 0;
+    font-size: 0.9rem;
+    background-color: rgb(232, 248, 233);
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+}
+
+/* .footer-brand h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-secondary-hover);
+    color: #144823;
+} */
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+}
+
+.footer-column h4 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    /* color: var(--color-secondary-hover); */
+    color: #144823;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+    /* color: var(--color-secondary-hover); */
+    text-decoration: none;
+    transition: opacity 0.2s;
+    color: #144823;
+}
+
+.footer-column a:hover {
+    opacity: 0.7;
+}
+
+.footer-column p {
+    color: var(--color-secondary-hover);
+    margin-bottom: 0.5rem;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-links {
+        flex: 1;
+        justify-content: flex-end;
+        max-width: 600px;
+    }
+}

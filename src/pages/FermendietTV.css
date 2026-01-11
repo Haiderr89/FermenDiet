@@ -1,0 +1,103 @@
+.tv-page {
+    padding-top: 150px;
+    padding-bottom: 4rem;
+    /* background-color: #7CB342; */
+    background-color: rgb(232, 248, 233);
+    /* Green background as per screenshot */
+    min-height: 100vh;
+    color: #144823;
+}
+
+.main-video-container {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 40%;
+    /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    background-color: #000;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.current-video-title {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.video-playlist {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.playlist-item {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.playlist-item:hover {
+    transform: translateY(-5px);
+}
+
+.playlist-thumbnail {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    margin-bottom: 0.5rem;
+    border: 2px solid transparent;
+}
+
+.playlist-item.active .playlist-thumbnail {
+    border-color: white;
+}
+
+.playlist-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.playlist-item:hover .play-overlay {
+    opacity: 1;
+}
+
+.playlist-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.4;
+}

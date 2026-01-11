@@ -1,0 +1,43 @@
+.shop-page {
+    padding-top: 100px;
+    /* Space for fixed navbar */
+    background-color: rgb(232, 248, 233);
+    min-height: 100vh;
+    padding-bottom: 4rem;
+}
+
+.shop-banner {
+    width: 90%;
+    height: 300px;
+    background-color: #fff;
+    /* Placeholder for banner image */
+    background-image: url('/images/banner.avif');
+    /* We will need to generate or use a placeholder */
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    margin-left: 5%;
+}
+
+.shop-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    color: #144823;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    justify-items: center;
+}
+
+div.container {
+    max-width: 1400px;
+}
+
+

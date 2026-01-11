@@ -1,0 +1,65 @@
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem 0;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-logo a {
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+    color: var(--color-text);
+    /* Or white depending on section? Image shows dark text at top left? No, likely white or dark green. Let's check image. */
+    /* Actually, looking at the image, the top bar has text. It looks like dark text or white? 
+     The background is green. Text is likely white or very dark green. 
+     Let's assume dark green or black for now as per the "FERMENDIET" logo at top left. 
+     Wait, the big "FERMENDIET" is in the middle. The top left one is small. 
+     Let's use dark green for now. */
+    color: var(--color-secondary-hover);
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.navbar-links a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    /* color: var(--color-accent); */
+    color: #144823;
+    /* White text for links on green bg */
+    transition: opacity 0.2s;
+}
+
+.navbar-links a:hover {
+    opacity: 0.8;
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: var(--color-secondary-hover);
+}
+
+.navbar-action-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: inherit;
+}

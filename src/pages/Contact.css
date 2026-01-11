@@ -1,0 +1,131 @@
+.contact-page {
+    padding-top: 150px;
+    padding-bottom: 4rem;
+    background-color: rgb(232, 248, 233);
+    min-height: 100vh;
+    color: #144823;
+}
+
+.contact-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.contact-subtitle {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 4rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.info-icon {
+    width: 24px;
+    height: 24px;
+    color: #144823;
+}
+
+.info-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.contact-socials h3 {
+    margin-bottom: 1rem;
+}
+
+.social-icons-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons-row a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #144823;
+    color: #144823;
+    transition: all 0.3s ease;
+}
+
+.social-icons-row a:hover {
+    background-color: #144823;
+    color: white;
+}
+
+.contact-form {
+    flex: 1.5;
+    background-color: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #144823;
+}
+
+.contact-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .contact-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}

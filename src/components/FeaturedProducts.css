@@ -1,0 +1,33 @@
+.featured-products {
+    padding: var(--spacing-lg) 0;
+    /* background-color: var(--color-primary); */
+    background-color: rgb(232, 248, 233);
+    /* Same bg as hero? Or slightly different? Image looks same. */
+    height: 100vh;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    /* color: var(--color-accent); */
+    color: #144823;
+    margin-bottom: var(--spacing-lg);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+h3.product-name {
+    color: #144823;
+}
+
+p.product-price {
+    color: #144823;
+}

@@ -1,0 +1,84 @@
+.about {
+    padding: var(--spacing-xl) 0 0;
+    /* background-color: #7CB342; */
+    /* Slightly different green or same? Let's use a fresh green */
+    /* background: linear-gradient(135deg, var(--color-primary) 0%, #7CB342 100%); */
+    /* color: var(--color-accent); */
+    background-color: rgb(232, 248, 233);
+    color: #144823;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    
+}
+
+.about-content {
+    flex: 1;
+    text-align: left;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+.btn-outline {
+    border: 2px solid var(--color-secondary);
+    background: transparent;
+    color: var(--color-secondary);
+}
+
+.btn-outline:hover {
+    background: var(--color-secondary);
+    color: var(--color-accent);
+}
+
+.about-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+}
+
+.about-image {
+    width: 100%;
+    /* max-width: 100%; Removed to allow full expansion within wrapper */
+    border-radius: var(--border-radius-full);
+    border-radius: 20px;
+    /* box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2); */
+}
+
+
+@media (min-width: 968px) {
+    .about-container {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+
+    .about-content {
+        flex: 0.8;
+        /* Take less space */
+    }
+
+    .about-image-wrapper {
+        flex: 1.2;
+        /* Take more space */
+        justify-content: flex-end;
+    }
+}
