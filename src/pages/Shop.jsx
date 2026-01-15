@@ -4,43 +4,43 @@ import './Shop.css';
 
 const shopProducts = [
     {
-        id: 1,
+        id: 'kefir-milk',
         name: 'Kefir Milk',
         price: '0.800 BHD',
-        image: '/images/laban.avif' // Placeholder, need to check if we have this
+        image: '/images/laban.avif'
     },
     {
-        id: 2,
+        id: 'hibiscus-kombucha',
         name: 'Hibiscus Kombucha',
         price: '1.200 BHD',
         image: '/images/hibiscus.avif'
     },
     {
-        id: 3,
+        id: 'ginger-lemon-kombucha',
         name: 'Ginger Lemon Kombucha',
         price: '1.200 BHD',
         image: '/images/ginger.avif'
     },
     {
-        id: 4,
+        id: 'lemon-lavender-water-kefir',
         name: 'Lemon Lavender Water Kefir',
         price: '1.200 BHD',
         image: '/images/lemon.avif'
     },
     {
-        id: 5,
+        id: 'red-tamarind-kombucha',
         name: 'Red Tamarind Kombucha',
         price: '1.500 BHD',
         image: '/images/red.avif'
     },
     {
-        id: 6,
+        id: 'cola-kombucha',
         name: 'Cola Kombucha',
         price: '1.200 BHD',
         image: '/images/cola.avif'
     },
     {
-        id: 7,
+        id: 'blueberry-water-kefir',
         name: 'Blueberry Water Kefir',
         price: '1.400 BHD',
         image: '/images/blueberry.avif'

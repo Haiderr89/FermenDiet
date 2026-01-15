@@ -1,0 +1,211 @@
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    backdrop-filter: blur(2px);
+}
+
+.cart-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    /* background-color: #88B04B; */
+    background-color: #e8f8e9;
+    /* Green background as per screenshot */
+    z-index: 2001;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.3s ease-out;
+    color: #144823;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.cart-drawer-header {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #144823;
+    color: white;
+}
+
+.cart-drawer-header h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    padding: 0.2rem;
+}
+
+.cart-drawer-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+}
+
+.empty-drawer {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.drawer-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.drawer-item-image {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.drawer-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.drawer-item-details {
+    flex: 1;
+}
+
+.drawer-item-details h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.drawer-item-price {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.drawer-quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgba(20, 72, 35, 0.3);
+    border-radius: 4px;
+    width: fit-content;
+    padding: 2px 5px;
+}
+
+.drawer-quantity-controls button {
+    background: none;
+    border: none;
+    padding: 2px;
+    cursor: pointer;
+    color: #144823;
+    display: flex;
+}
+
+.drawer-quantity-controls span {
+    font-size: 0.9rem;
+    min-width: 15px;
+    text-align: center;
+}
+
+.drawer-remove-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #144823;
+    opacity: 0.7;
+    padding: 0;
+    height: fit-content;
+}
+
+.cart-drawer-footer {
+    padding: 1.5rem;
+    /* background-color: #7CB342; */
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.promo-code {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.drawer-summary {
+    margin-bottom: 1.5rem;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.tax-note {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+.drawer-checkout-btn,
+.drawer-view-cart-btn {
+    width: 100%;
+    margin-bottom: 0.8rem;
+    padding: 0.8rem;
+    font-weight: 600;
+}
+
+.drawer-checkout-btn {
+    background-color: #144823;
+    color: white;
+    border: none;
+}
+
+.drawer-view-cart-btn {
+    background-color: transparent;
+    border: 1px solid #144823;
+    color: #144823;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+}
+
+.secure-checkout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+}

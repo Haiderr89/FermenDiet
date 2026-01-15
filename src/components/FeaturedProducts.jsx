@@ -4,22 +4,22 @@ import './FeaturedProducts.css';
 
 const products = [
     {
-        id: 1,
+        id: 'blueberry-water-kefir',
         name: 'Blueberry Water Kefir',
         price: '1.400 BHD',
-        image: '/images/blueberry.avif' // Placeholder
+        image: '/images/blueberry.avif'
     },
     {
-        id: 2,
+        id: 'lemon-lavender-water-kefir',
         name: 'Lemon Lavender Water Kefir',
         price: '1.200 BHD',
-        image: '/images/lemon.avif' // Placeholder
+        image: '/images/lemon.avif'
     },
     {
-        id: 3,
+        id: 'hibiscus-kombucha',
         name: 'Hibiscus Kombucha',
         price: '1.200 BHD',
-        image: '/images/hibiscus.avif' // Placeholder
+        image: '/images/hibiscus.avif'
     }
 ];
 

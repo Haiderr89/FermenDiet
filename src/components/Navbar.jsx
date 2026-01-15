@@ -1,32 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { User, ShoppingBag } from 'lucide-react';
+import { User, ShoppingBag, Menu, X } from 'lucide-react';
+import { useCart } from '../context/CartContext';
 import './Navbar.css';
 
 const Navbar = () => {
+    const { getCartCount, toggleCart } = useCart();
+    const cartCount = getCartCount();
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
+    const closeMobileMenu = () => {
+        setIsMobileMenuOpen(false);
+    };
+
     return (
         <nav className="navbar">
             <div className="navbar-container container">
                 <div className="navbar-logo">
-                    <Link to="/"><img src="/images/FermenDiet.png" alt="" style={{ width: '150px' }} /></Link>
+                    <Link to="/" onClick={closeMobileMenu}>
+                        <img src="/images/FermenDiet.png" alt="" style={{ width: '150px' }} />
+                    </Link>
                 </div>
 
-                <ul className="navbar-links">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/shop">Shop</Link></li>
-                    <li><Link to="/tv">Fermendiet TV</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
+                <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
+                    {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                </div>
+
+                <ul className={`navbar-links ${isMobileMenuOpen ? 'active' : ''}`}>
+                    <li><Link to="/" onClick={closeMobileMenu}>Home</Link></li>
+                    <li><Link to="/about" onClick={closeMobileMenu}>About</Link></li>
+                    <li><Link to="/shop" onClick={closeMobileMenu}>Shop</Link></li>
+                    <li><Link to="/tv" onClick={closeMobileMenu}>Fermendiet TV</Link></li>
+                    <li><Link to="/contact" onClick={closeMobileMenu}>Contact</Link></li>
                 </ul>
 
                 <div className="navbar-actions">
-                    <a href="#login" className="navbar-action-item">
+                    <Link to="/login" className="navbar-action-item">
                         <User size={20} />
-                        <span>Login</span>
-                    </a>
-                    <a href="#cart" className="navbar-action-item">
+                        <span className="action-label">Login</span>
+                    </Link>
+                    <div className="navbar-action-item cart-icon-wrapper" onClick={toggleCart} style={{ cursor: 'pointer' }}>
                         <ShoppingBag size={20} />
-                    </a>
+                        {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
+                    </div>
                 </div>
             </div>
         </nav>
