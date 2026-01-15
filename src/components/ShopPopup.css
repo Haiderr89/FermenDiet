@@ -1,0 +1,188 @@
+.shop-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+}
+
+.shop-popup-content {
+    background: white;
+    width: 32%;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    animation: popupFadeIn 0.3s ease-out;
+    font-family: 'Cairo', sans-serif;
+    /* Assuming an Arabic font is available or fallback */
+    direction: rtl;
+}
+
+@keyframes popupFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.shop-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.shop-popup-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #144823;
+    /* Matching the green theme */
+    margin: 0;
+}
+
+.shop-popup-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #144823;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+}
+
+.shop-popup-close:hover {
+    color: #333;
+}
+
+.shop-popup-body {
+    padding: 20px;
+    /* max-height: 70vh; Removed to let list handle scrolling */
+}
+
+.shop-popup-search {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.shop-popup-search input {
+    width: 100%;
+    padding: 10px 40px 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    text-align: right;
+}
+
+.shop-popup-search input:focus {
+    border-color: #2e7d32;
+}
+
+.shop-popup-search-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+}
+
+.shop-popup-list-title {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.shop-popup-list-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: right;
+    font-weight: 600;
+}
+
+.shop-popup-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 410px;
+    overflow-y: auto;
+    padding-left: 5px;
+    /* Space for scrollbar in RTL */
+}
+
+.shop-popup-item {
+    background-color: #e7e7e7;
+    border-radius: 6px;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-align: right;
+    display: block;
+    /* Ensure anchor behaves like a block */
+    text-decoration: none;
+    /* Remove underline */
+    color: inherit;
+    /* Inherit text color */
+}
+
+.shop-popup-item:hover {
+    background-color: #e0e0e0;
+}
+
+.shop-popup-item-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #6e6e6e;
+    margin-bottom: 8px;
+}
+
+.shop-popup-item-details {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    color: #666;
+    font-size: 18px;
+}
+
+.shop-popup-detail {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Scrollbar styling */
+.shop-popup-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.shop-popup-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.shop-popup-body::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.shop-popup-body::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+}

@@ -3,7 +3,7 @@ import './Hero.css';
 
 const heroImages = [
     '/images/blueberry.avif',
-    '/images/lemon.avif', 
+    '/images/lemon.avif',
     '/images/hibiscus.avif',
     '/images/cola.avif',
     '/images/ginger.avif',
@@ -42,10 +42,10 @@ const Hero = () => {
                     <p className="hero-description">
                         Your daily dose of refreshing gut-friendly drinks and natural fermentation.
                     </p>
-                    <button className="btn btn-primary" onClick={() => window.location.href = '/shop'}>Shop Now</button>
+                    {/* <button className="btn btn-primary" onClick={() => window.location.href = '/shop'}>Shop Now</button> */}
+                    <button className="btn btn-primary"><a href="https://fermendiet.com">Shop Now</a></button>
                 </div>
             </div>
-            
         </section>
     );
 };

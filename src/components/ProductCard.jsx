@@ -25,9 +25,9 @@ const ProductCard = ({ image, name, price, id }) => {
             </div>
             <h3 className="product-name">{name}</h3>
             <p className="product-price">{price}</p>
-            <button className="btn btn-secondary product-btn" onClick={handleAddToCart}>
+            {/* <button className="btn btn-secondary product-btn" onClick={handleAddToCart}>
                 Add to Cart
-            </button>
+            </button> */}
         </div>
     );
 };
