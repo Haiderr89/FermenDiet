@@ -31,7 +31,7 @@ const Navbar = () => {
                 <div className="navbar-container container">
                     <div className="navbar-logo">
                         <Link to="/" onClick={closeMobileMenu}>
-                            <img src="/images/FermenDiet.png" alt="" style={{ width: '150px' }} />
+                            <img src="/images/logoNew.svg" alt="" style={{ width: '25%' }} />
                         </Link>
                     </div>
 
