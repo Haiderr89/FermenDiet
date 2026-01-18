@@ -2,48 +2,56 @@ import React from 'react';
 import ProductCard from '../components/ProductCard';
 import './Shop.css';
 
+import laban from '../assets/laban.avif';
+import hibiscus from '../assets/hibiscus.avif';
+import ginger from '../assets/ginger.avif';
+import lemon from '../assets/lemon.avif';
+import red from '../assets/red.avif';
+import cola from '../assets/cola.avif';
+import blueberry from '../assets/blueberry.avif';
+
 const shopProducts = [
     {
         id: 'kefir-milk',
         name: 'Kefir Milk',
         price: '0.800 BHD',
-        image: '/images/laban.avif'
+        image: laban
     },
     {
         id: 'hibiscus-kombucha',
         name: 'Hibiscus Kombucha',
         price: '1.200 BHD',
-        image: '/images/hibiscus.avif'
+        image: hibiscus
     },
     {
         id: 'ginger-lemon-kombucha',
         name: 'Ginger Lemon Kombucha',
         price: '1.200 BHD',
-        image: '/images/ginger.avif'
+        image: ginger
     },
     {
         id: 'lemon-lavender-water-kefir',
         name: 'Lemon Lavender Water Kefir',
         price: '1.200 BHD',
-        image: '/images/lemon.avif'
+        image: lemon
     },
     {
         id: 'red-tamarind-kombucha',
         name: 'Red Tamarind Kombucha',
         price: '1.500 BHD',
-        image: '/images/red.avif'
+        image: red
     },
     {
         id: 'cola-kombucha',
         name: 'Cola Kombucha',
         price: '1.200 BHD',
-        image: '/images/cola.avif'
+        image: cola
     },
     {
         id: 'blueberry-water-kefir',
         name: 'Blueberry Water Kefir',
         price: '1.400 BHD',
-        image: '/images/blueberry.avif'
+        image: blueberry
     }
 ];
 

@@ -1,15 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import './About.css';
 
+import areej1 from '../assets/Areej/areej1.avif';
+import areej2 from '../assets/Areej/areej2.avif';
+import areej3 from '../assets/Areej/areej3.avif';
+import areej6 from '../assets/Areej/areej6.avif';
+import areej7 from '../assets/Areej/areej7.avif';
+import areej8 from '../assets/Areej/areej8.avif';
+
 const storyImages = [
-    "/images/Areej/areej1.avif",
-    "/images/Areej/areej2.avif",
-    "/images/Areej/areej3.avif",
+    areej1,
+    areej2,
+    areej3,
     // "/images/Areej/areej4.avif",
     // "/images/Areej/areej5.avif",
-    "/images/Areej/areej6.avif",
-    "/images/Areej/areej7.avif",
-    "/images/Areej/areej8.avif",
+    areej6,
+    areej7,
+    areej8,
 ];
 
 const About = () => {
@@ -85,7 +92,7 @@ const About = () => {
                         </p>
                     </div>
                     <div className="bio-image-container">
-                        <img src="/images/Areej/areej9.avif" alt="Areej Matooq" className="bio-image" />
+                        <img src={areejImage} alt="Areej Matooq" className="bio-image" />
                     </div>
                 </div>
             </section>

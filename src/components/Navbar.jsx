@@ -5,6 +5,8 @@ import { useCart } from '../context/CartContext';
 import ShopPopup from './ShopPopup';
 import './Navbar.css';
 
+import logo from '../assets/logoNew.svg';
+
 const Navbar = () => {
     const { getCartCount, toggleCart } = useCart();
     const cartCount = getCartCount();
@@ -31,7 +33,7 @@ const Navbar = () => {
                 <div className="navbar-container container">
                     <div className="navbar-logo">
                         <Link to="/" onClick={closeMobileMenu}>
-                            <img src="/images/logoNew.svg" alt="" style={{ width: '25%' }} />
+                            <img src={logo} alt="" style={{ width: '25%' }} />
                         </Link>
                     </div>
 

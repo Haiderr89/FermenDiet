@@ -1,14 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import './Hero.css';
 
+import blueberry from '../assets/blueberry.avif';
+import lemon from '../assets/lemon.avif';
+import hibiscus from '../assets/hibiscus.avif';
+import cola from '../assets/cola.avif';
+import ginger from '../assets/ginger.avif';
+import laban from '../assets/laban.avif';
+import red from '../assets/red.avif';
+
 const heroImages = [
-    '/images/blueberry.avif',
-    '/images/lemon.avif',
-    '/images/hibiscus.avif',
-    '/images/cola.avif',
-    '/images/ginger.avif',
-    '/images/laban.avif',
-    '/images/red.avif',
+    blueberry,
+    lemon,
+    hibiscus,
+    cola,
+    ginger,
+    laban,
+    red,
 ];
 
 const Hero = () => {

@@ -2,24 +2,28 @@ import React from 'react';
 import ProductCard from './ProductCard';
 import './FeaturedProducts.css';
 
+import blueberry from '../assets/blueberry.avif';
+import lemon from '../assets/lemon.avif';
+import hibiscus from '../assets/hibiscus.avif';
+
 const products = [
     {
         id: 'blueberry-water-kefir',
         name: 'Blueberry Water Kefir',
         price: '1.400 BHD',
-        image: '/images/blueberry.avif'
+        image: blueberry
     },
     {
         id: 'lemon-lavender-water-kefir',
         name: 'Lemon Lavender Water Kefir',
         price: '1.200 BHD',
-        image: '/images/lemon.avif'
+        image: lemon
     },
     {
         id: 'hibiscus-kombucha',
         name: 'Hibiscus Kombucha',
         price: '1.200 BHD',
-        image: '/images/hibiscus.avif'
+        image: hibiscus
     }
 ];
 

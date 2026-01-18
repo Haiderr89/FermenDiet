@@ -11,7 +11,7 @@
     height: 300px;
     background-color: #fff;
     /* Placeholder for banner image */
-    background-image: url('/images/banner.avif');
+    background-image: url('../assets/banner.avif');
     /* We will need to generate or use a placeholder */
     background-size: cover;
     background-position: center;

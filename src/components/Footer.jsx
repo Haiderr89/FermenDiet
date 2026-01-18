@@ -1,14 +1,16 @@
+
 import React from 'react';
 import { Instagram, Facebook, Youtube, Twitter } from 'lucide-react';
 import './Footer.css';
+import logo from '../assets/FermenDiet.png';
 
 const Footer = () => {
     return (
         <footer className="footer">
-            <div className="container footer-container">
-                <div className="footer-brand">
+            <div className="footer-container container">
+                <div className="footer-logo">
                     {/* <h3>FERMENDIET</h3> */}
-                    <img src="/images/FermenDiet.png" alt="FermenDietLogo" style={{ width: '250px' }} />
+                    <img src={logo} alt="FermenDietLogo" style={{ width: '250px' }} />
                 </div>
 
                 <div className="footer-links">
