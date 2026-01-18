@@ -7,6 +7,7 @@ import areej3 from '../assets/Areej/areej3.avif';
 import areej6 from '../assets/Areej/areej6.avif';
 import areej7 from '../assets/Areej/areej7.avif';
 import areej8 from '../assets/Areej/areej8.avif';
+import areejImage from '../assets/Areej/areej9.avif';
 
 const storyImages = [
     areej1,
