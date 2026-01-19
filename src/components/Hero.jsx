@@ -9,6 +9,8 @@ import ginger from '../assets/ginger.avif';
 import laban from '../assets/laban.avif';
 import red from '../assets/red.avif';
 
+import logo from '../assets/logoNew.svg';
+
 const heroImages = [
     blueberry,
     lemon,
@@ -32,7 +34,8 @@ const Hero = () => {
 
     return (
         <section className="hero" id="home">
-            <div className="hero-background-text">FERMENDIET</div>
+            {/* <div className="hero-background-text">FERMENDIET</div> */}
+            <img src={logo} alt="FermenDiet Logo" className="hero-background-logo" />
 
             <div className="hero-content container">
                 <div className="hero-image-container">

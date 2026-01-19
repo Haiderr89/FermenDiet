@@ -1,17 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { User, ShoppingBag, Menu, X } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import ShopPopup from './ShopPopup';
 import './Navbar.css';
 
-import logo from '../assets/logoNew.svg';
+import logo from '../assets/FermenDiet.png';
 
 const Navbar = () => {
     const { getCartCount, toggleCart } = useCart();
     const cartCount = getCartCount();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isShopPopupOpen, setIsShopPopupOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const isScrolled = window.scrollY > 50;
+            if (isScrolled !== scrolled) {
+                setScrolled(isScrolled);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [scrolled]);
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -29,11 +45,11 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="navbar">
+            <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
                 <div className="navbar-container container">
                     <div className="navbar-logo">
                         <Link to="/" onClick={closeMobileMenu}>
-                            <img src={logo} alt="" style={{ width: '25%' }} />
+                            <img src={logo} alt="" style={{ width: '15%' }} />
                         </Link>
                     </div>
 
@@ -50,7 +66,7 @@ const Navbar = () => {
                         <li><Link to="/contact" onClick={closeMobileMenu}>Contact</Link></li>
                     </ul>
 
-                    <div className="navbar-actions">
+                    {/* <div className="navbar-actions">
                         <Link to="/login" className="navbar-action-item">
                             <User size={20} />
                             <span className="action-label">Login</span>
@@ -59,7 +75,7 @@ const Navbar = () => {
                             <ShoppingBag size={20} />
                             {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </nav>
             <ShopPopup isOpen={isShopPopupOpen} onClose={() => setIsShopPopupOpen(false)} />
